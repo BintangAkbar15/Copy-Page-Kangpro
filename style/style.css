@@ -128,8 +128,11 @@ header{
 
 #section-1{
     margin-top: 0;
+    .container{
+        justify-content: center;
+    }
     .text-wrapper{
-        width: 100%;
+        
         h1{
             width: max-content;
             height: max-content;
@@ -174,6 +177,7 @@ header{
     .second-section{
         display: flex;
         gap: 10px;
+        justify-content: center;
         .detail-user{
             display: flex;
             gap: 20px;
@@ -494,6 +498,12 @@ header{
 }
 
 #section-7{
+    .container{
+        justify-content: center;
+    }
+    .text-container{
+        width: max-content;
+    }
     small{
         color: blue;
         font-weight: 700;
@@ -569,8 +579,10 @@ header{
 }
 
 #section-9{
+    .container{
+        justify-content: center;
+    }
     .text-wrapper{
-        width: 100%;
         display: grid;
         justify-content: center;
         p{
@@ -578,8 +590,8 @@ header{
         }
     }
     .image-wrapper{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
         justify-content: center;
         gap: 20px;
         img{
