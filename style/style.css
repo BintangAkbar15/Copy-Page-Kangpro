@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-body{
+*{
     font-family: 'Poppins', sans-serif;
+}
+body{
     padding: 0 2em;
 }
 
 [id^="section-"]{
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
+}
+
+.w-all{
+    width: 100%;
 }
 
 .container{
@@ -20,13 +25,18 @@ h1{
     line-height: 50px;
 }
 
+h3{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+}
 
-.text-wrapper > h1{
+.text-wrapper > h1,.text-wrapper > h2{
     font-size: 40px;    
 }
 
 main section{
-    margin: 10em 0;
+    margin: 5em 0;
 }
 
 .proww{
@@ -200,7 +210,7 @@ header{
     .container{
         justify-content: center;
     }
-    .text-wrapper > h1 {
+    .text-wrapper > h1,.text-wrapper > h2 {
         text-align: center;
         font-size: 32px;
         font-weight: bold;
@@ -220,69 +230,98 @@ header{
     }
 }
 
-#section-3{
-    .container{
-        justify-content: center;
+#section-3 {
+
+  .container {
+    justify-content: center;
+  }
+
+  .text-wrapper {
+    > h1,
+    > h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-    .text-wrapper > h1 {
-        text-align: center;
-        font-size: 32px;
-        font-weight: bold;
-        margin-bottom: 10px;
+
+    > p {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 50px;
+      white-space: pre-line;
     }
-    .text-wrapper > p {
-        text-align: center;
-        font-size: 16px;
-        color: #555;
-        margin-bottom: 50px;
-        white-space: pre-line;
-    }
-    .best-container{
+
+    .best-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+
+      .best {
+        width: 170px;
         display: flex;
+        flex-direction: column;
         gap: 8px;
-        .best{
-            width: 170px;
-            .best-image{
-                img{
-                    width: 200px;
-                }
-            }
-            .best-name{
-                p{
-                    margin: 0;
-                    font-size: 13px;
-                }
-            }
-            .best-detail{
-                .best-detail-icon{
-                    display: flex;
-                    gap: 5px;
-                    p{
-                        margin: 0;
-                        font-size: 12px;
-                    }
-                    img{
-                        filter: invert(39%) sepia(98%) saturate(379%) hue-rotate(75deg) brightness(95%) contrast(90%);
-                        width: 15px;
-                    }
-                }
-            }
+
+        .best-image {
+          img {
+            width: 100%;
+            display: block;
+          }
         }
-        .bordered{
-            border: 2px dotted #22c55e;
-            width: max-content;
-            height: max-content;
-            padding: 10px;
-            border-radius: 10px;
+
+        .best-name {
+          p {
+            margin: 0;
+            font-size: 13px;
+          }
+
+          b {
+            display: block;
+            font-weight: 600;
+          }
         }
+
+        .best-detail {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          .best-detail-icon {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            p {
+              margin: 0;
+              font-size: 12px;
+            }
+
+            img {
+              width: 15px;
+              filter: invert(39%) sepia(98%) saturate(379%) hue-rotate(75deg) brightness(95%) contrast(90%);
+            }
+          }
+        }
+      }
+
+      .bordered {
+        border: 2px dotted #22c55e;
+        padding: 10px;
+        border-radius: 10px;
+      }
     }
+  }
 }
+
 
 #section-4{
     .container{
         justify-content: center;
     }
-    .text-wrapper > h1 {
+    .text-wrapper > h1,.text-wrapper > h2 {
         text-align: center;
         font-size: 32px;
         font-weight: bold;
@@ -314,7 +353,7 @@ header{
                 }
             }
             .service-wrapper{
-                padding: 10px;
+                padding: 10px 0;
                 p{
                     margin: 0;
                     font-size: 12px;
@@ -335,7 +374,7 @@ header{
     .container{
         justify-content: center;
     }
-    .text-wrapper > h1 {
+    .text-wrapper > h1, .text-wrapper> h2 {
         text-align: center;
         font-size: 32px;
         font-weight: bold;
@@ -423,6 +462,15 @@ header{
             margin-top: 10px;
         }
     }
+    .wd-item{
+        display: flex;
+        gap: 5px;
+        margin: 4 px 0;
+        p{
+            margin: 0;
+            font-size: 14px;
+        }
+    }
     .status-waiting {
         display: inline-block;
         background-color: #e6f0ff; /* biru muda */
@@ -481,7 +529,7 @@ header{
         grid-template-columns: repeat(4,1fr);
         gap: 20px;
     }
-    .text-wrapper > h1 {
+    .text-wrapper > h1,.text-wrapper > h2 {
         text-align: center;
         font-size: 32px;
         font-weight: bold;
@@ -531,7 +579,7 @@ header{
         margin: 0 auto;
     }
 
-    .text-wrapper > h1 {
+    .text-wrapper > h1,.text-wrapper > h2 {
         text-align: center;
         font-size: 32px;
         font-weight: bold;
